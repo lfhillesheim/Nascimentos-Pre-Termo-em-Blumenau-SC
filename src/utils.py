@@ -116,7 +116,7 @@ def plot_grafico_kessner(total_adequado, total_inadequado, total_intermediario, 
 
     plt.tight_layout()
     plt.show()
-    plt.savefig(f"img/graph_kessner.png")
+    plt.savefig(f"img/graph_kessner.png" , transparent=True)
 
     plot_grafico_kessner(total_adequado, total_inadequado, total_intermediario, percentuais_adequado, percentuais_inadequado, percentuais_intermediario, categorias, quantidades_adequado, quantidades_inadequado, quantidades_intermediario)
 
@@ -245,7 +245,7 @@ def venn_primiparas_multiparas(somente_cesarea, somente_parto_vaginal, somente_a
 
     plt.title(f'Gestações anteriores \n\nTotal de Gestantes: {total_populacao} \n\n Gestantes Multíparas: {total_multiparas} \n\n Gestantes Primíparas {total_primiparas}', fontdict={'fontsize': 15})
     
-    plt.savefig(f"img/venn_primiparar_multiparas.png")
+    plt.savefig(f"img/venn_primiparar_multiparas.png" , transparent=True)
 
     plt.show()
 
@@ -305,7 +305,7 @@ def texto_primiparas_multiparas(total_populacao, total_multiparas, total_primipa
 
 
 
-def print_df_numerico(df_numerico, entidade='Gestante'):
+def print_df_numerico(df_numerico, entidade='Gestante', transparente=False):
     sns.set_theme(style="whitegrid")
 
     # Verificando se as colunas são numéricas
@@ -366,7 +366,7 @@ def print_df_numerico(df_numerico, entidade='Gestante'):
 
     plt.tight_layout(rect=[0, 0.03, 1, 0.95])
     
-    plt.savefig(f"img/numerico_{entidade}.png")
+    plt.savefig(f"img/numerico_{entidade}.png" , transparent=True)
 
     plt.show()
 
@@ -401,7 +401,7 @@ def explorar_dados(df, tipo, colunas_relevantes):
         plt.yticks(fontsize=10)
         plt.tight_layout()
         
-        plt.savefig(f"img/categoricos_{column}.png")
+        plt.savefig(f"img/categoricos_{column}.png" , transparent=True)
 
         plt.show()
     
@@ -490,7 +490,7 @@ def analise_exploratoria_multivalorada(df, coluna_splitada, id_col, df_co, df_or
     plt.yticks(fontsize=11)
     plt.tight_layout()  # Ajustar layout para evitar corte de rótulos
     
-    plt.savefig(f"img/multi_valor_{coluna_splitada}.png")
+    plt.savefig(f"img/multi_valor_{coluna_splitada}.png" , transparent=True)
 
     plt.show()
 
@@ -542,7 +542,7 @@ def analise_exploratoria_multivalorada(df, coluna_splitada, id_col, df_co, df_or
     
     plt.tight_layout()  # Ajustar layout para evitar corte de rótulos
 
-    plt.savefig(f"img/co_ocorrencia_{coluna_splitada}.png")
+    plt.savefig(f"img/co_ocorrencia_{coluna_splitada}.png" , transparent=True)
 
     plt.show()
 
@@ -724,7 +724,7 @@ def plot_grafico_menininos_meninas(total_meninos, total_meninas, percentuais_men
 
 
     plt.tight_layout()
-    plt.savefig(f"img/analise_meninos_meninas.png")
+    plt.savefig(f"img/analise_meninos_meninas.png" , transparent=True)
 
     plt.show()
 
@@ -941,7 +941,7 @@ def plotar_heatmap_categorico(detalhes_gestacoes_df, colunas_multivaloradas, tit
             ax.set_xlim(0, len(dados_categoricos.columns) + max_value + 1)
 
             # Usar constrained_layout para melhor dimensionamento
-            plt.savefig(f"img/heat_map_categorico.png")
+            plt.savefig(f"img/heat_map_categorico.png" , transparent=True)
 
             plt.show()
 
@@ -998,7 +998,7 @@ def plotar_comparacao_caracteristicas_numericas(df_pre_termo, df_bom_desfecho, d
 
         plt.tight_layout()
         
-        plt.savefig(f"img/comparacao_caracteristicas_numericas.png")
+        plt.savefig(f"img/comparacao_caracteristicas_numericas.png" , transparent=True)
 
         plt.show()
 
@@ -1046,7 +1046,7 @@ def plotar_matriz_co_ocorrencia(analise_estatistica, prefixo_intercorrencias='IN
     plt.yticks(rotation=0, fontsize=15)
     plt.tight_layout()
     
-    plt.savefig(f"img/matriz_co_ocorrencia_.png")
+    plt.savefig(f"img/matriz_co_ocorrencia_.png" , transparent=True)
 
     plt.show()
 
@@ -1090,7 +1090,7 @@ def plotar_heatmap_sociodemografico(analise_estatistica, metadados_colunas, max_
     plt.yticks(fontsize=12)
     plt.tight_layout()
 
-    plt.savefig(f"img/heatmap_sociodemografico.png")
+    plt.savefig(f"img/heatmap_sociodemografico.png" , transparent=True)
 
     plt.show()
 
@@ -1238,6 +1238,6 @@ def plot_kessner_distribution(df_gestantes):
     plt.tight_layout()
 
 # Exibir o gráfico
-    plt.savefig(f"img/kessner_distribuition.png")
+    plt.savefig(f"img/kessner_distribuition.png" , transparent=True)
 
     plt.show()
